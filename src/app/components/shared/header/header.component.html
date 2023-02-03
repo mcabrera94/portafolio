@@ -1,0 +1,28 @@
+<header
+  class="main-header w-100"
+  [ngClass]="[
+    dark ? 'position-absolute' : '',
+    absolute ? 'position-absolute' : ''
+  ]"
+>
+  <nav
+    class="navbar navbar-expand-xl sticky-header z-10"
+    [ngClass]="[dark ? 'navbar-dark' : 'navbar-light', sticky ? 'affix' : '']"
+    (scroll)="onscroll()"
+  >
+    <div
+      class="container d-flex align-items-center justify-content-lg-between position-relative"
+    >
+      <div class="collapse navbar-collapse justify-content-center">
+        <ul class="nav col-12 col-md-auto justify-content-center main-menu">
+          <li><a (click)="ScrollIntoView('#home')" style="cursor: pointer;" class="nav-link">Home</a></li>
+          <li><a (click)="ScrollIntoView('#whychoose')" style="cursor: pointer;" class="nav-link">Nosotros</a></li>
+          <li><a (click)="ScrollIntoView('#services')" style="cursor: pointer;" class="nav-link">Servicios</a></li>
+          <li><a (click)="ScrollIntoView('#testimonials')" style="cursor: pointer;" class="nav-link">Testimonios</a></li>
+          <li><a (click)="ScrollIntoView('#contact')" style="cursor: pointer;" class="nav-link">Contacto</a></li>
+        </ul>
+      </div>
+      </div>
+    
+  </nav>
+</header>
